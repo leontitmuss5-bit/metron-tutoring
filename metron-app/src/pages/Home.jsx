@@ -66,10 +66,21 @@ const subjects = {
     ],
 }
 
+const heroImages = ['/founders.png', '/hero-sports.png']
+
 export default function Home() {
     const [scrollY, setScrollY] = useState(0)
     const heroRef = useRef(null)
     const [heroHeight, setHeroHeight] = useState(1000)
+    const [currentImage, setCurrentImage] = useState(0)
+
+    // Image slideshow timer
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % heroImages.length)
+        }, 5000)
+        return () => clearInterval(timer)
+    }, [])
 
     useEffect(() => {
         const updateHeight = () => {
@@ -113,20 +124,24 @@ export default function Home() {
                 ref={heroRef}
                 className="relative w-full min-h-[70vh] md:min-h-0 md:aspect-video overflow-hidden bg-black"
             >
-                {/* Background image with parallax + blur */}
-                <div
-                    className="absolute inset-[-20px] will-change-transform"
-                    style={{
-                        transform: `translate3d(0, ${scrollY * 0.3}px, 0) scale(${1 + heroProgress * 0.06})`,
-                        filter: 'blur(6px)',
-                    }}
-                >
-                    <img
-                        src="/founders.png"
-                        alt=""
-                        className="w-full h-full object-cover"
-                    />
-                </div>
+                {/* Background images with crossfade + parallax + blur */}
+                {heroImages.map((src, i) => (
+                    <div
+                        key={src}
+                        className="absolute inset-[-20px] will-change-transform transition-opacity duration-[1500ms] ease-in-out"
+                        style={{
+                            transform: `translate3d(0, ${scrollY * 0.3}px, 0) scale(${1 + heroProgress * 0.06})`,
+                            filter: 'blur(6px)',
+                            opacity: currentImage === i ? 1 : 0,
+                        }}
+                    >
+                        <img
+                            src={src}
+                            alt=""
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                ))}
 
                 {/* Dark cinematic overlay */}
                 <div className="absolute inset-0 bg-black/50" />
