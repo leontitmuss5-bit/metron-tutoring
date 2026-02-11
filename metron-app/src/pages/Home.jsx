@@ -156,7 +156,7 @@ export default function Home() {
                     }}
                 >
                     <img
-                        src="/balancelandingblack.png"
+                        src="/balancelandingwhite.png"
                         alt="Balance — IB and HSC mentoring founded by elite athletes who achieved top scores, est. 2026"
                         className="w-[400px] md:w-[560px] lg:w-[720px] max-w-[80vw] select-none"
                         draggable="false"
@@ -376,7 +376,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* ===== THE BALANCE PHILOSOPHY ===== */}
+            {/* ===== A BALANCED PHILOSOPHY ===== */}
             <section className="py-16 md:py-32 bg-background-light dark:bg-background-dark">
                 <div className="max-w-6xl mx-auto px-5 md:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
@@ -395,7 +395,7 @@ export default function Home() {
                         <div className="order-1 lg:order-2">
                             <div className="mb-6 md:mb-10">
                                 <div className="w-12 h-px bg-primary-accent mb-4 md:mb-6"></div>
-                                <h2 className="text-2xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">The Balance Philosophy</h2>
+                                <h2 className="text-2xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">A Balanced Philosophy</h2>
                             </div>
                             <div className="space-y-4 md:space-y-6 text-sm md:text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed">
                                 <p>

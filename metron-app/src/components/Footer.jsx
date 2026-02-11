@@ -6,16 +6,16 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-5 md:gap-8 mb-8 md:mb-10">
                     {/* Logo */}
-                    <Link to="/" className="relative block h-7 md:h-8 w-[120px] md:w-[140px] overflow-hidden">
+                    <Link to="/" className="relative block h-6 w-[90px] md:h-7 md:w-[105px]">
                         <img
                             src="/balanceblack.png"
                             alt="Balance"
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] md:w-[300px] max-w-none dark:hidden"
+                            className="absolute inset-0 w-full h-full object-cover dark:hidden"
                         />
                         <img
                             src="/balancewhite.png"
                             alt="Balance"
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] md:w-[300px] max-w-none hidden dark:block"
+                            className="absolute inset-0 w-full h-full object-cover hidden dark:block"
                         />
                     </Link>
 
