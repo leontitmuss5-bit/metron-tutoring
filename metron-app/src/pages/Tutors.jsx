@@ -228,26 +228,24 @@ export default function Tutors() {
                 </div>
             </header>
 
-            {/* Filter bar */}
-            <section className="border-y border-border-light dark:border-border-dark bg-white/50 dark:bg-surface-dark/50 backdrop-blur-sm sticky top-[88px] z-40">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4">
-                    <div className="flex items-center justify-center gap-2">
-                        {filters.map((filter) => (
-                            <button
-                                key={filter}
-                                onClick={() => setActiveFilter(filter)}
-                                className={`px-5 py-1.5 rounded-full text-sm font-medium transition-all ${
-                                    activeFilter === filter
-                                        ? 'bg-primary text-white shadow-sm'
-                                        : 'text-text-muted-light dark:text-text-muted-dark hover:bg-gray-100 dark:hover:bg-white/10'
-                                }`}
-                            >
-                                {filter}
-                            </button>
-                        ))}
-                    </div>
+            {/* Floating filter pill */}
+            <div className="sticky top-[76px] md:top-[80px] z-40 flex justify-center py-3 pointer-events-none">
+                <div className="inline-flex items-center gap-1 px-2 py-1.5 rounded-full bg-surface-light/70 dark:bg-background-dark/70 backdrop-blur-xl border border-border-light/40 dark:border-border-dark/40 shadow-md shadow-black/[0.03] dark:shadow-black/20 pointer-events-auto">
+                    {filters.map((filter) => (
+                        <button
+                            key={filter}
+                            onClick={() => setActiveFilter(filter)}
+                            className={`px-4 py-1 rounded-full text-xs font-medium transition-all ${
+                                activeFilter === filter
+                                    ? 'bg-primary text-white shadow-sm'
+                                    : 'text-text-muted-light dark:text-text-muted-dark hover:bg-gray-100 dark:hover:bg-white/10'
+                            }`}
+                        >
+                            {filter}
+                        </button>
+                    ))}
                 </div>
-            </section>
+            </div>
 
             <main className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
                 {/* IB Tutors */}

@@ -7,9 +7,9 @@ export default function Layout() {
     const location = useLocation()
     const isHome = location.pathname === '/'
 
-    // Scroll to top on route change
+    // Scroll to top on route change (instant to override CSS smooth-scroll)
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
     }, [location.pathname])
 
     return (
