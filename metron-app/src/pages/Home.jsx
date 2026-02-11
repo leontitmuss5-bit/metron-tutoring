@@ -151,13 +151,13 @@ export default function Home() {
                 {/* Scroll indicator */}
                 <button
                     onClick={scrollToContent}
-                    className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 cursor-pointer group focus:outline-none"
+                    className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-10 cursor-pointer group focus:outline-none animate-bounce-gentle"
                     style={{ opacity: Math.max(0, 1 - heroProgress * 5) }}
                     aria-label="Scroll down"
                 >
-                    <div className="w-[26px] h-[42px] rounded-full border-2 border-white/40 group-hover:border-white/80 transition-colors duration-300 flex justify-center pt-2">
-                        <div className="w-[3px] h-[10px] bg-white/70 rounded-full animate-scroll-dot" />
-                    </div>
+                    <svg className="w-5 h-5 text-white/70 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
                 </button>
             </section>
 

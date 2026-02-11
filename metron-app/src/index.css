@@ -46,6 +46,20 @@
     animation: scrollDot 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
+/* Gentle bounce for scroll arrow */
+@keyframes bounceGentle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+.animate-bounce-gentle {
+    animation: bounceGentle 2s ease-in-out infinite;
+}
+
 /* Infinite marquee scroll */
 @keyframes marquee {
     0% {
