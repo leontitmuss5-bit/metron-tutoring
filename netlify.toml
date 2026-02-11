@@ -1,10 +1,7 @@
 [build]
   base = "metron-app"
-  command = "npm install && npm run build"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "18"
+  command = "npm install && npx vite build"
+  publish = "metron-app/dist"
 
 [[redirects]]
   from = "/*"
