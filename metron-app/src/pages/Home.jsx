@@ -179,6 +179,19 @@ export default function Home() {
             {/* ===== STATS + CTA ===== */}
             <section className="py-14 md:py-28 bg-background-light dark:bg-background-dark">
                 <div className="max-w-5xl mx-auto px-5 md:px-6 lg:px-8">
+                    {/* Intro text */}
+                    <div className="max-w-3xl mx-auto mb-12 md:mb-16 text-center">
+                        <p className="text-sm md:text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed mb-4 md:mb-5">
+                            Real Balance Tutoring is a tutoring service built on real, recent academic experience.
+                        </p>
+                        <p className="text-sm md:text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed mb-4 md:mb-5">
+                            We are united by our common belief that achieving success in years 11 and 12 shouldn't preclude following other interests. Each of us completed these years while continuing our elite sporting passions. Our realisation was that school enables this if its structures and aims are understood. The approach of 'studying smarter, not harder' is one we hope to pass on through our tutoring sessions demonstrating that studying success can be part of a balanced life.
+                        </p>
+                        <p className="text-sm md:text-base text-text-muted-light dark:text-text-muted-dark italic">
+                            — Will, Leon and Paddy.
+                        </p>
+                    </div>
+
                     {/* Stats row */}
                     <div className="grid grid-cols-3 gap-4 md:gap-12 mb-10 md:mb-14">
                         <div className="text-center">
