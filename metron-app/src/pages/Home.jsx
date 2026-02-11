@@ -156,8 +156,8 @@ export default function Home() {
                     }}
                 >
                     <img
-                        src="/metronlanding.png"
-                        alt="métron — elite IB and HSC mentoring, est. 2026"
+                        src="/balancelandingblack.png"
+                        alt="Balance — IB and HSC mentoring founded by elite athletes who achieved top scores, est. 2026"
                         className="w-[400px] md:w-[560px] lg:w-[720px] max-w-[80vw] select-none"
                         draggable="false"
                     />
@@ -207,12 +207,12 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* ===== ABOUT MÉTRON ===== */}
+            {/* ===== ABOUT BALANCE ===== */}
             <section id="about" className="py-16 md:py-32 bg-white dark:bg-surface-dark/30 border-y border-border-light dark:border-border-dark">
                 <div className="max-w-4xl mx-auto px-5 md:px-6 lg:px-8">
                     <div className="mb-8 md:mb-12">
                         <div className="w-12 h-px bg-primary-accent mb-4 md:mb-6"></div>
-                        <h2 className="text-2xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">About Métron</h2>
+                        <h2 className="text-2xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">About Balance</h2>
                     </div>
                     <div className="space-y-5 md:space-y-6 text-sm md:text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed">
                         <p>
@@ -222,10 +222,10 @@ export default function Home() {
                             Balancing heavy academic demands with already full schedules forced us to rethink how we studied. Instead of increasing hours, we refined our approach, streamlining revision, prioritising high-impact tasks, and learning how to work with the curriculum rather than against it. This made our study time more effective, more sustainable, and ultimately more enjoyable.
                         </p>
                         <p>
-                            When those methods began to consistently deliver results, we founded what is now Métron Tutoring. While our roots are in IB tutoring, Métron has grown to include a wider network of tutors and now supports both IB and HSC students across a range of subjects.
+                            When those methods began to consistently deliver results, we founded what is now Balance Tutoring. While our roots are in IB tutoring, Balance has grown to include a wider network of tutors and now supports both IB and HSC students across a range of subjects.
                         </p>
                         <p>
-                            Our goal remains the same: to give students the tools, strategies, and guidance to perform at a high level academically without sacrificing the things that matter to them. "Study smarter, not harder" may be a cliché, but at Métron, we focus on making it practical, structured, and achievable.
+                            Our goal remains the same: to give students the tools, strategies, and guidance to perform at a high level academically without sacrificing the things that matter to them. "Study smarter, not harder" may be a cliché, but at Balance, we focus on making it practical, structured, and achievable.
                         </p>
                     </div>
                 </div>
@@ -376,7 +376,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* ===== THE MÉTRON PHILOSOPHY ===== */}
+            {/* ===== THE BALANCE PHILOSOPHY ===== */}
             <section className="py-16 md:py-32 bg-background-light dark:bg-background-dark">
                 <div className="max-w-6xl mx-auto px-5 md:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
@@ -385,7 +385,7 @@ export default function Home() {
                             <div className="rounded-2xl overflow-hidden shadow-xl">
                                 <img
                                     src="/founders-photo.jpeg"
-                                    alt="The Métron founders"
+                                    alt="The Balance founders"
                                     className="w-full h-auto object-cover"
                                 />
                             </div>
@@ -395,17 +395,17 @@ export default function Home() {
                         <div className="order-1 lg:order-2">
                             <div className="mb-6 md:mb-10">
                                 <div className="w-12 h-px bg-primary-accent mb-4 md:mb-6"></div>
-                                <h2 className="text-2xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">The Métron Philosophy</h2>
+                                <h2 className="text-2xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">The Balance Philosophy</h2>
                             </div>
                             <div className="space-y-4 md:space-y-6 text-sm md:text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed">
                                 <p>
-                                    Métron Tutoring is a modern tutoring service built on real, recent academic experience — originally founded through the International Baccalaureate, and now expanded to support both IB and HSC students.
+                                    Balance Tutoring is a modern tutoring service built on real, recent academic experience — originally founded through the International Baccalaureate, and now expanded to support both IB and HSC students.
                                 </p>
                                 <p>
                                     What began as a small team of three graduates has grown into a broader collective of high-performing tutors who share the same core belief: academic success shouldn't come at the expense of a balanced life. Each of our tutors has navigated demanding academic programs while maintaining commitments beyond the classroom, whether in sport, creative pursuits, or other passions.
                                 </p>
                                 <p>
-                                    Our insight is simple: when the structure, priorities, and assessment logic of a curriculum are properly understood, students don't need to study endlessly to succeed. Métron Tutoring focuses on clarity, efficiency, and strategy, helping students study smarter, not harder, and achieve strong results without burnout.
+                                    Our insight is simple: when the structure, priorities, and assessment logic of a curriculum are properly understood, students don't need to study endlessly to succeed. Balance Tutoring focuses on clarity, efficiency, and strategy, helping students study smarter, not harder, and achieve strong results without burnout.
                                 </p>
                             </div>
                         </div>
@@ -419,7 +419,7 @@ export default function Home() {
                 <div className="max-w-4xl mx-auto px-5 md:px-6 text-center relative z-10">
                     <h2 className="text-2xl md:text-5xl font-serif text-white mb-5 md:mb-8">Ready to define your academic future?</h2>
                     <p className="text-sm md:text-lg text-gray-300 mb-8 md:mb-10 font-light">
-                        Consult with our senior mentors today and discover how Métron can transform your results.
+                        Consult with our senior mentors today and discover how Balance can transform your results.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
                         <Link to="#" className="bg-primary-accent text-primary px-8 md:px-10 py-3.5 md:py-4 rounded-full font-bold hover:bg-white transition-all shadow-xl text-sm md:text-base">Book a Free Consultation</Link>

@@ -81,7 +81,7 @@ export default function TutorProfile() {
                                     With over five years of experience mentoring the highest tier of HSC and IB students, James has developed a proprietary methodology that transcends simple rote learning. His approach focuses on <strong>first-principles understanding</strong> and strategic examination technique.
                                 </p>
                                 <p>
-                                    As the Head of Mathematics at Métron, James has curated a curriculum that identifies the common pitfalls of elite students, bridging the gap between a high Band 6 and a State Rank performance. His students consistently report not just improved grades, but a fundamental shift in how they perceive complex quantitative problems.
+                                    As the Head of Mathematics at Balance, James has curated a curriculum that identifies the common pitfalls of elite students, bridging the gap between a high Band 6 and a State Rank performance. His students consistently report not just improved grades, but a fundamental shift in how they perceive complex quantitative problems.
                                 </p>
                             </div>
                         </section>
@@ -98,7 +98,7 @@ export default function TutorProfile() {
                                 </li>
                                 <li className="flex items-center gap-3 text-sm">
                                     <span className="material-symbols-outlined text-primary-accent text-lg">verified</span>
-                                    <span>Lead author of the Métron "Ext 2 Strategy" Workbook</span>
+                                    <span>Lead author of the Balance "Ext 2 Strategy" Workbook</span>
                                 </li>
                             </ul>
                         </section>
@@ -120,7 +120,7 @@ export default function TutorProfile() {
                         <div className="max-w-2xl">
                             <h2 className="text-3xl md:text-4xl font-serif text-primary dark:text-white mb-6 tracking-tight">Ready to excel with James?</h2>
                             <p className="text-lg text-text-muted-light dark:text-text-muted-dark">
-                                Experience the Métron difference. Our consultations are designed to map out a clear path to your academic goals.
+                                Experience the Balance difference. Our consultations are designed to map out a clear path to your academic goals.
                             </p>
                         </div>
                         <div className="flex-shrink-0">

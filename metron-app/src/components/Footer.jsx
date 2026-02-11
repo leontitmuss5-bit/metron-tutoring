@@ -8,13 +8,13 @@ export default function Footer() {
                     {/* Logo */}
                     <Link to="/" className="relative block h-7 md:h-8 w-[120px] md:w-[140px] overflow-hidden">
                         <img
-                            src="/metronblack.png"
-                            alt="métron"
+                            src="/balanceblack.png"
+                            alt="Balance"
                             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] md:w-[300px] max-w-none dark:hidden"
                         />
                         <img
-                            src="/metronwhite.png"
-                            alt="métron"
+                            src="/balancewhite.png"
+                            alt="Balance"
                             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] md:w-[300px] max-w-none hidden dark:block"
                         />
                     </Link>
@@ -24,12 +24,12 @@ export default function Footer() {
                         <Link to="/#about" className="hover:text-primary-accent transition-colors">About Us</Link>
                         <Link to="/tutors" className="hover:text-primary-accent transition-colors">Our Tutors</Link>
                         <Link to="/pricing" className="hover:text-primary-accent transition-colors">Pricing</Link>
-                        <a href="mailto:hello@metrontutoring.com" className="hover:text-primary-accent transition-colors">Contact</a>
+                        <a href="mailto:hello@balancetutoring.com" className="hover:text-primary-accent transition-colors">Contact</a>
                     </nav>
                 </div>
 
                 <div className="border-t border-border-light dark:border-border-dark pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark">© 2026 Métron Tutoring. All rights reserved.</p>
+                    <p className="text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark">© 2026 Balance Tutoring. All rights reserved.</p>
                     <div className="flex space-x-6">
                         <Link className="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-white transition-colors" to="#">
                             <span className="sr-only">Instagram</span>

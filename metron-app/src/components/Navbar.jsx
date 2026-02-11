@@ -54,13 +54,13 @@ export default function Navbar() {
                         <div className="flex-shrink-0">
                             <Link to="/" className="relative block h-7 w-[120px] md:h-8 md:w-[140px] overflow-hidden">
                                 <img
-                                    src="/metronblack.png"
-                                    alt="métron"
+                                    src="/balanceblack.png"
+                                    alt="Balance"
                                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] md:w-[300px] max-w-none dark:hidden"
                                 />
                                 <img
-                                    src="/metronwhite.png"
-                                    alt="métron"
+                                    src="/balancewhite.png"
+                                    alt="Balance"
                                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] md:w-[300px] max-w-none hidden dark:block"
                                 />
                             </Link>
