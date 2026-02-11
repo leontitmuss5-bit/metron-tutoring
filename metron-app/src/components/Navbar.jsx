@@ -52,15 +52,15 @@ export default function Navbar() {
                     <div className="flex items-center justify-between gap-4 md:gap-10 h-12 md:h-16">
                         {/* Logo - zoomed into the text portion of the square PNG */}
                         <div className="flex-shrink-0">
-                            <Link to="/" className="relative block h-6 w-[90px] md:h-7 md:w-[105px]">
+                            <Link to="/" className="relative block h-8 w-[65px] md:h-10 md:w-[80px]">
                                 <img
-                                    src="/balanceblack.png"
-                                    alt="Balance"
+                                    src="/rbalanceblack.png"
+                                    alt="Real Balance"
                                     className="absolute inset-0 w-full h-full object-cover dark:hidden"
                                 />
                                 <img
-                                    src="/balancewhite.png"
-                                    alt="Balance"
+                                    src="/rbalancewhite.png"
+                                    alt="Real Balance"
                                     className="absolute inset-0 w-full h-full object-cover hidden dark:block"
                                 />
                             </Link>

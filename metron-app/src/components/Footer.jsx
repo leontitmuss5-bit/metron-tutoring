@@ -6,15 +6,15 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-5 md:gap-8 mb-8 md:mb-10">
                     {/* Logo */}
-                    <Link to="/" className="relative block h-6 w-[90px] md:h-7 md:w-[105px]">
+                    <Link to="/" className="relative block h-8 w-[65px] md:h-10 md:w-[80px]">
                         <img
-                            src="/balanceblack.png"
-                            alt="Balance"
+                            src="/rbalanceblack.png"
+                            alt="Real Balance"
                             className="absolute inset-0 w-full h-full object-cover dark:hidden"
                         />
                         <img
-                            src="/balancewhite.png"
-                            alt="Balance"
+                            src="/rbalancewhite.png"
+                            alt="Real Balance"
                             className="absolute inset-0 w-full h-full object-cover hidden dark:block"
                         />
                     </Link>
@@ -29,7 +29,7 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-border-light dark:border-border-dark pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark">© 2026 Balance Tutoring. All rights reserved.</p>
+                    <p className="text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark">© 2026 Real Balance Tutoring. All rights reserved.</p>
                     <div className="flex space-x-6">
                         <Link className="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-white transition-colors" to="#">
                             <span className="sr-only">Instagram</span>
