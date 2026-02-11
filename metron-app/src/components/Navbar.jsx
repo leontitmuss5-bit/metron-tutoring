@@ -47,9 +47,9 @@ export default function Navbar() {
                     : '-translate-y-[calc(100%+20px)] opacity-0 pointer-events-none'
             }`}
         >
-            <div className="mt-3 md:mt-4 mx-3 inline-flex flex-col rounded-2xl bg-surface-light/85 dark:bg-background-dark/85 backdrop-blur-xl border border-border-light/50 dark:border-border-dark/50 shadow-lg shadow-black/[0.04] dark:shadow-black/30">
-                <div className="px-5 lg:px-6">
-                    <div className="flex items-center justify-between gap-6 md:gap-10 h-14 md:h-16">
+            <div className="mt-2 md:mt-4 mx-2 md:mx-3 inline-flex flex-col rounded-2xl bg-surface-light/85 dark:bg-background-dark/85 backdrop-blur-xl border border-border-light/50 dark:border-border-dark/50 shadow-lg shadow-black/[0.04] dark:shadow-black/30 max-w-[calc(100vw-16px)]">
+                <div className="px-4 md:px-5 lg:px-6">
+                    <div className="flex items-center justify-between gap-4 md:gap-10 h-12 md:h-16">
                         {/* Logo - zoomed into the text portion of the square PNG */}
                         <div className="flex-shrink-0">
                             <Link to="/" className="relative block h-7 w-[120px] md:h-8 md:w-[140px] overflow-hidden">
@@ -96,11 +96,11 @@ export default function Navbar() {
                         isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
                     }`}
                 >
-                    <div className="px-4 pt-1 pb-4 space-y-1 border-t border-border-light/30 dark:border-border-dark/30">
-                        <Link to="/" className="text-text-light dark:text-text-dark hover:text-primary-accent block px-3 py-2.5 rounded-lg text-base font-medium transition-colors">Home</Link>
-                        <Link to="/tutors" className="text-text-light dark:text-text-dark hover:text-primary-accent block px-3 py-2.5 rounded-lg text-base font-medium transition-colors">Tutors</Link>
-                        <Link to="/pricing" className="text-text-light dark:text-text-dark hover:text-primary-accent block px-3 py-2.5 rounded-lg text-base font-medium transition-colors">Pricing</Link>
-                        <Link to="#" className="block mx-3 mt-2 text-center bg-primary text-white px-5 py-2.5 rounded-full text-sm font-medium">Book Free Consultation</Link>
+                    <div className="px-3 pt-1 pb-3 space-y-0.5 border-t border-border-light/30 dark:border-border-dark/30">
+                        <Link to="/" className="text-text-light dark:text-text-dark hover:text-primary-accent block px-3 py-3 rounded-lg text-sm font-medium transition-colors active:bg-gray-100 dark:active:bg-white/10">Home</Link>
+                        <Link to="/tutors" className="text-text-light dark:text-text-dark hover:text-primary-accent block px-3 py-3 rounded-lg text-sm font-medium transition-colors active:bg-gray-100 dark:active:bg-white/10">Tutors</Link>
+                        <Link to="/pricing" className="text-text-light dark:text-text-dark hover:text-primary-accent block px-3 py-3 rounded-lg text-sm font-medium transition-colors active:bg-gray-100 dark:active:bg-white/10">Pricing</Link>
+                        <Link to="#" className="block mx-2 mt-2 text-center bg-primary text-white px-5 py-3 rounded-full text-sm font-medium active:bg-black/80">Book Free Consultation</Link>
                     </div>
                 </div>
             </div>

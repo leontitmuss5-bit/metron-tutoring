@@ -111,7 +111,7 @@ export default function Home() {
             {/* ===== FULL-SCREEN HERO (16:9 laptop ratio) ===== */}
             <section
                 ref={heroRef}
-                className="relative w-full aspect-video overflow-hidden bg-black"
+                className="relative w-full min-h-[70vh] md:min-h-0 md:aspect-video overflow-hidden bg-black"
             >
                 {/* Background image with parallax + blur */}
                 <div
@@ -162,30 +162,30 @@ export default function Home() {
             </section>
 
             {/* ===== STATS + CTA ===== */}
-            <section className="py-20 md:py-28 bg-background-light dark:bg-background-dark">
-                <div className="max-w-5xl mx-auto px-6 lg:px-8">
+            <section className="py-14 md:py-28 bg-background-light dark:bg-background-dark">
+                <div className="max-w-5xl mx-auto px-5 md:px-6 lg:px-8">
                     {/* Stats row */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-14">
+                    <div className="grid grid-cols-3 gap-4 md:gap-12 mb-10 md:mb-14">
                         <div className="text-center">
-                            <p className="text-5xl md:text-6xl font-serif font-medium text-primary dark:text-white tracking-tight">99+</p>
-                            <p className="mt-2 text-sm text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest font-semibold">Average ATAR</p>
+                            <p className="text-3xl md:text-6xl font-serif font-medium text-primary dark:text-white tracking-tight">99+</p>
+                            <p className="mt-1 md:mt-2 text-[10px] md:text-sm text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest font-semibold">Average ATAR</p>
                         </div>
                         <div className="text-center">
-                            <p className="text-5xl md:text-6xl font-serif font-medium text-primary dark:text-white tracking-tight">44+</p>
-                            <p className="mt-2 text-sm text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest font-semibold">Average IBAS</p>
+                            <p className="text-3xl md:text-6xl font-serif font-medium text-primary dark:text-white tracking-tight">44+</p>
+                            <p className="mt-1 md:mt-2 text-[10px] md:text-sm text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest font-semibold">Average IBAS</p>
                         </div>
                         <div className="text-center">
-                            <p className="text-5xl md:text-6xl font-serif font-medium text-primary-accent tracking-tight">Top</p>
-                            <p className="mt-2 text-sm text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest font-semibold">State Rankers</p>
+                            <p className="text-3xl md:text-6xl font-serif font-medium text-primary-accent tracking-tight">Top</p>
+                            <p className="mt-1 md:mt-2 text-[10px] md:text-sm text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest font-semibold">State Rankers</p>
                         </div>
                     </div>
 
                     {/* CTA buttons */}
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link to="#" className="px-10 py-4 bg-primary text-white rounded-full font-medium hover:bg-black transition-all shadow-lg text-sm uppercase tracking-widest">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
+                        <Link to="#" className="w-full sm:w-auto text-center px-8 md:px-10 py-3.5 md:py-4 bg-primary text-white rounded-full font-medium hover:bg-black transition-all shadow-lg text-xs md:text-sm uppercase tracking-widest">
                             Book a Free Consultation
                         </Link>
-                        <Link to="/tutors" className="px-10 py-4 border border-border-light dark:border-border-dark text-primary dark:text-white rounded-full font-medium hover:border-primary-accent transition-all text-sm uppercase tracking-widest">
+                        <Link to="/tutors" className="w-full sm:w-auto text-center px-8 md:px-10 py-3.5 md:py-4 border border-border-light dark:border-border-dark text-primary dark:text-white rounded-full font-medium hover:border-primary-accent transition-all text-xs md:text-sm uppercase tracking-widest">
                             Meet Our Tutors
                         </Link>
                     </div>
@@ -193,13 +193,13 @@ export default function Home() {
             </section>
 
             {/* ===== ABOUT MÉTRON ===== */}
-            <section id="about" className="py-24 md:py-32 bg-white dark:bg-surface-dark/30 border-y border-border-light dark:border-border-dark">
-                <div className="max-w-4xl mx-auto px-6 lg:px-8">
-                    <div className="mb-12">
-                        <div className="w-12 h-px bg-primary-accent mb-6"></div>
-                        <h2 className="text-3xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">About Métron</h2>
+            <section id="about" className="py-16 md:py-32 bg-white dark:bg-surface-dark/30 border-y border-border-light dark:border-border-dark">
+                <div className="max-w-4xl mx-auto px-5 md:px-6 lg:px-8">
+                    <div className="mb-8 md:mb-12">
+                        <div className="w-12 h-px bg-primary-accent mb-4 md:mb-6"></div>
+                        <h2 className="text-2xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">About Métron</h2>
                     </div>
-                    <div className="space-y-6 text-base md:text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                    <div className="space-y-5 md:space-y-6 text-sm md:text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed">
                         <p>
                             During our own academic journeys, we quickly noticed how different structured programs like the IB — and later the HSC — are from what many students initially expect. Each has its own philosophy, assessment style, and internal logic, and these aren't always obvious when you're in the middle of it.
                         </p>
@@ -217,11 +217,11 @@ export default function Home() {
             </section>
 
             {/* ===== TOP TUTORS (infinite scroll) ===== */}
-            <section className="py-24 md:py-32 bg-background-light dark:bg-background-dark overflow-hidden">
-                <div className="max-w-5xl mx-auto px-6 lg:px-8 mb-16">
+            <section className="py-16 md:py-32 bg-background-light dark:bg-background-dark overflow-hidden">
+                <div className="max-w-5xl mx-auto px-5 md:px-6 lg:px-8 mb-10 md:mb-16">
                     <div className="text-center">
-                        <div className="w-12 h-px bg-primary-accent mx-auto mb-6"></div>
-                        <h2 className="text-3xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">Top Tutors</h2>
+                        <div className="w-12 h-px bg-primary-accent mx-auto mb-4 md:mb-6"></div>
+                        <h2 className="text-2xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">Top Tutors</h2>
                     </div>
                 </div>
 
@@ -234,33 +234,33 @@ export default function Home() {
                     <div className="flex animate-marquee">
                         {/* First set */}
                         {topTutors.map((tutor, i) => (
-                            <div key={`a-${i}`} className="flex-shrink-0 w-72 mx-5">
-                                <div className="bg-white dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
-                                    <div className="flex items-center gap-4 mb-5">
-                                        <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-border-light dark:border-border-dark flex-shrink-0">
+                            <div key={`a-${i}`} className="flex-shrink-0 w-60 md:w-72 mx-3 md:mx-5">
+                                <div className="bg-white dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark p-4 md:p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                                    <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-5">
+                                        <div className="w-11 h-11 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-border-light dark:border-border-dark flex-shrink-0">
                                             <img src={tutor.image} alt={tutor.name} className="w-full h-full object-cover object-top" />
                                         </div>
                                         <div>
-                                            <h3 className="text-base font-semibold text-primary dark:text-white">{tutor.name}</h3>
-                                            <span className="text-[10px] font-bold uppercase tracking-widest text-primary-accent">{tutor.type}</span>
+                                            <h3 className="text-sm md:text-base font-semibold text-primary dark:text-white">{tutor.name}</h3>
+                                            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-primary-accent">{tutor.type}</span>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-0">
                                         {tutor.type === 'IB' ? (
                                             <>
-                                                <div className="flex-1 py-2 bg-gray-50 dark:bg-white/5 border border-border-light dark:border-border-dark rounded-l-lg text-center">
-                                                    <p className="text-lg font-serif font-medium text-primary dark:text-white leading-none">{tutor.score}</p>
-                                                    <p className="text-[9px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-1">IBAS</p>
+                                                <div className="flex-1 py-1.5 md:py-2 bg-gray-50 dark:bg-white/5 border border-border-light dark:border-border-dark rounded-l-lg text-center">
+                                                    <p className="text-base md:text-lg font-serif font-medium text-primary dark:text-white leading-none">{tutor.score}</p>
+                                                    <p className="text-[8px] md:text-[9px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-1">IBAS</p>
                                                 </div>
-                                                <div className="flex-1 py-2 bg-gray-50 dark:bg-white/5 border border-border-light dark:border-border-dark border-l-0 rounded-r-lg text-center">
-                                                    <p className="text-lg font-serif font-medium text-primary dark:text-white leading-none">{tutor.atar}</p>
-                                                    <p className="text-[9px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-1">ATAR Equiv.</p>
+                                                <div className="flex-1 py-1.5 md:py-2 bg-gray-50 dark:bg-white/5 border border-border-light dark:border-border-dark border-l-0 rounded-r-lg text-center">
+                                                    <p className="text-base md:text-lg font-serif font-medium text-primary dark:text-white leading-none">{tutor.atar}</p>
+                                                    <p className="text-[8px] md:text-[9px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-1">ATAR Equiv.</p>
                                                 </div>
                                             </>
                                         ) : (
-                                            <div className="flex-1 py-2 bg-gray-50 dark:bg-white/5 border border-border-light dark:border-border-dark rounded-lg text-center">
-                                                <p className="text-lg font-serif font-medium text-primary dark:text-white leading-none">{tutor.atar}</p>
-                                                <p className="text-[9px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-1">ATAR</p>
+                                            <div className="flex-1 py-1.5 md:py-2 bg-gray-50 dark:bg-white/5 border border-border-light dark:border-border-dark rounded-lg text-center">
+                                                <p className="text-base md:text-lg font-serif font-medium text-primary dark:text-white leading-none">{tutor.atar}</p>
+                                                <p className="text-[8px] md:text-[9px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-1">ATAR</p>
                                             </div>
                                         )}
                                     </div>
@@ -269,33 +269,33 @@ export default function Home() {
                         ))}
                         {/* Duplicate set for seamless loop */}
                         {topTutors.map((tutor, i) => (
-                            <div key={`b-${i}`} className="flex-shrink-0 w-72 mx-5">
-                                <div className="bg-white dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
-                                    <div className="flex items-center gap-4 mb-5">
-                                        <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-border-light dark:border-border-dark flex-shrink-0">
+                            <div key={`b-${i}`} className="flex-shrink-0 w-60 md:w-72 mx-3 md:mx-5">
+                                <div className="bg-white dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark p-4 md:p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                                    <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-5">
+                                        <div className="w-11 h-11 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-border-light dark:border-border-dark flex-shrink-0">
                                             <img src={tutor.image} alt={tutor.name} className="w-full h-full object-cover object-top" />
                                         </div>
                                         <div>
-                                            <h3 className="text-base font-semibold text-primary dark:text-white">{tutor.name}</h3>
-                                            <span className="text-[10px] font-bold uppercase tracking-widest text-primary-accent">{tutor.type}</span>
+                                            <h3 className="text-sm md:text-base font-semibold text-primary dark:text-white">{tutor.name}</h3>
+                                            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-primary-accent">{tutor.type}</span>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-0">
                                         {tutor.type === 'IB' ? (
                                             <>
-                                                <div className="flex-1 py-2 bg-gray-50 dark:bg-white/5 border border-border-light dark:border-border-dark rounded-l-lg text-center">
-                                                    <p className="text-lg font-serif font-medium text-primary dark:text-white leading-none">{tutor.score}</p>
-                                                    <p className="text-[9px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-1">IBAS</p>
+                                                <div className="flex-1 py-1.5 md:py-2 bg-gray-50 dark:bg-white/5 border border-border-light dark:border-border-dark rounded-l-lg text-center">
+                                                    <p className="text-base md:text-lg font-serif font-medium text-primary dark:text-white leading-none">{tutor.score}</p>
+                                                    <p className="text-[8px] md:text-[9px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-1">IBAS</p>
                                                 </div>
-                                                <div className="flex-1 py-2 bg-gray-50 dark:bg-white/5 border border-border-light dark:border-border-dark border-l-0 rounded-r-lg text-center">
-                                                    <p className="text-lg font-serif font-medium text-primary dark:text-white leading-none">{tutor.atar}</p>
-                                                    <p className="text-[9px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-1">ATAR Equiv.</p>
+                                                <div className="flex-1 py-1.5 md:py-2 bg-gray-50 dark:bg-white/5 border border-border-light dark:border-border-dark border-l-0 rounded-r-lg text-center">
+                                                    <p className="text-base md:text-lg font-serif font-medium text-primary dark:text-white leading-none">{tutor.atar}</p>
+                                                    <p className="text-[8px] md:text-[9px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-1">ATAR Equiv.</p>
                                                 </div>
                                             </>
                                         ) : (
-                                            <div className="flex-1 py-2 bg-gray-50 dark:bg-white/5 border border-border-light dark:border-border-dark rounded-lg text-center">
-                                                <p className="text-lg font-serif font-medium text-primary dark:text-white leading-none">{tutor.atar}</p>
-                                                <p className="text-[9px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-1">ATAR</p>
+                                            <div className="flex-1 py-1.5 md:py-2 bg-gray-50 dark:bg-white/5 border border-border-light dark:border-border-dark rounded-lg text-center">
+                                                <p className="text-base md:text-lg font-serif font-medium text-primary dark:text-white leading-none">{tutor.atar}</p>
+                                                <p className="text-[8px] md:text-[9px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-1">ATAR</p>
                                             </div>
                                         )}
                                     </div>
@@ -317,12 +317,12 @@ export default function Home() {
             </section>
 
             {/* ===== SUBJECTS ===== */}
-            <section className="py-24 md:py-32 bg-white dark:bg-surface-dark/30 border-y border-border-light dark:border-border-dark">
-                <div className="max-w-5xl mx-auto px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <div className="w-12 h-px bg-primary-accent mx-auto mb-6"></div>
-                        <h2 className="text-3xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">Subjects We Offer</h2>
-                        <p className="mt-4 text-text-muted-light dark:text-text-muted-dark max-w-2xl mx-auto">
+            <section className="py-16 md:py-32 bg-white dark:bg-surface-dark/30 border-y border-border-light dark:border-border-dark">
+                <div className="max-w-5xl mx-auto px-5 md:px-6 lg:px-8">
+                    <div className="text-center mb-10 md:mb-16">
+                        <div className="w-12 h-px bg-primary-accent mx-auto mb-4 md:mb-6"></div>
+                        <h2 className="text-2xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">Subjects We Offer</h2>
+                        <p className="mt-3 md:mt-4 text-sm md:text-base text-text-muted-light dark:text-text-muted-dark max-w-2xl mx-auto">
                             Comprehensive support across both the International Baccalaureate and HSC curriculums.
                         </p>
                     </div>
@@ -362,9 +362,9 @@ export default function Home() {
             </section>
 
             {/* ===== THE MÉTRON PHILOSOPHY ===== */}
-            <section className="py-24 md:py-32 bg-background-light dark:bg-background-dark">
-                <div className="max-w-6xl mx-auto px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <section className="py-16 md:py-32 bg-background-light dark:bg-background-dark">
+                <div className="max-w-6xl mx-auto px-5 md:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
                         {/* Image */}
                         <div className="order-2 lg:order-1">
                             <div className="rounded-2xl overflow-hidden shadow-xl">
@@ -378,11 +378,11 @@ export default function Home() {
 
                         {/* Text */}
                         <div className="order-1 lg:order-2">
-                            <div className="mb-10">
-                                <div className="w-12 h-px bg-primary-accent mb-6"></div>
-                                <h2 className="text-3xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">The Métron Philosophy</h2>
+                            <div className="mb-6 md:mb-10">
+                                <div className="w-12 h-px bg-primary-accent mb-4 md:mb-6"></div>
+                                <h2 className="text-2xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">The Métron Philosophy</h2>
                             </div>
-                            <div className="space-y-6 text-base md:text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                            <div className="space-y-4 md:space-y-6 text-sm md:text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed">
                                 <p>
                                     Métron Tutoring is a modern tutoring service built on real, recent academic experience — originally founded through the International Baccalaureate, and now expanded to support both IB and HSC students.
                                 </p>
@@ -399,16 +399,16 @@ export default function Home() {
             </section>
 
             {/* ===== FINAL CTA ===== */}
-            <section className="relative py-24 bg-primary dark:bg-surface-dark overflow-hidden">
+            <section className="relative py-16 md:py-24 bg-primary dark:bg-surface-dark overflow-hidden">
                 <div className="absolute inset-0 opacity-10 grid-pattern"></div>
-                <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-                    <h2 className="text-3xl md:text-5xl font-serif text-white mb-8">Ready to define your academic future?</h2>
-                    <p className="text-lg text-gray-300 mb-10 font-light">
+                <div className="max-w-4xl mx-auto px-5 md:px-6 text-center relative z-10">
+                    <h2 className="text-2xl md:text-5xl font-serif text-white mb-5 md:mb-8">Ready to define your academic future?</h2>
+                    <p className="text-sm md:text-lg text-gray-300 mb-8 md:mb-10 font-light">
                         Consult with our senior mentors today and discover how Métron can transform your results.
                     </p>
-                    <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Link to="#" className="bg-primary-accent text-primary px-10 py-4 rounded-full font-bold hover:bg-white transition-all shadow-xl">Book a Free Consultation</Link>
-                        <Link to="/pricing" className="border border-white/30 text-white px-10 py-4 rounded-full font-medium hover:bg-white/10 transition-all">Pricing</Link>
+                    <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
+                        <Link to="#" className="bg-primary-accent text-primary px-8 md:px-10 py-3.5 md:py-4 rounded-full font-bold hover:bg-white transition-all shadow-xl text-sm md:text-base">Book a Free Consultation</Link>
+                        <Link to="/pricing" className="border border-white/30 text-white px-8 md:px-10 py-3.5 md:py-4 rounded-full font-medium hover:bg-white/10 transition-all text-sm md:text-base">Pricing</Link>
                     </div>
                 </div>
             </section>

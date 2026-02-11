@@ -2,25 +2,25 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
-        <footer className="bg-background-light dark:bg-background-dark pt-12 pb-8 border-t border-border-light dark:border-border-dark">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">
+        <footer className="bg-background-light dark:bg-background-dark pt-10 md:pt-12 pb-6 md:pb-8 border-t border-border-light dark:border-border-dark">
+            <div className="max-w-7xl mx-auto px-5 md:px-6 lg:px-8">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-5 md:gap-8 mb-8 md:mb-10">
                     {/* Logo */}
-                    <Link to="/" className="relative block h-8 w-[140px] overflow-hidden">
+                    <Link to="/" className="relative block h-7 md:h-8 w-[120px] md:w-[140px] overflow-hidden">
                         <img
                             src="/metronblack.png"
                             alt="métron"
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] max-w-none dark:hidden"
+                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] md:w-[300px] max-w-none dark:hidden"
                         />
                         <img
                             src="/metronwhite.png"
                             alt="métron"
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] max-w-none hidden dark:block"
+                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] md:w-[300px] max-w-none hidden dark:block"
                         />
                     </Link>
 
                     {/* Nav links */}
-                    <nav className="flex items-center gap-8 text-sm text-text-muted-light dark:text-text-muted-dark">
+                    <nav className="flex flex-wrap items-center justify-center gap-5 md:gap-8 text-xs md:text-sm text-text-muted-light dark:text-text-muted-dark">
                         <Link to="/#about" className="hover:text-primary-accent transition-colors">About Us</Link>
                         <Link to="/tutors" className="hover:text-primary-accent transition-colors">Our Tutors</Link>
                         <Link to="/pricing" className="hover:text-primary-accent transition-colors">Pricing</Link>
@@ -28,8 +28,8 @@ export default function Footer() {
                     </nav>
                 </div>
 
-                <div className="border-t border-border-light dark:border-border-dark pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-xs text-text-muted-light dark:text-text-muted-dark">© 2026 Métron Tutoring. All rights reserved.</p>
+                <div className="border-t border-border-light dark:border-border-dark pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="text-[10px] md:text-xs text-text-muted-light dark:text-text-muted-dark">© 2026 Métron Tutoring. All rights reserved.</p>
                     <div className="flex space-x-6">
                         <Link className="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-white transition-colors" to="#">
                             <span className="sr-only">Instagram</span>

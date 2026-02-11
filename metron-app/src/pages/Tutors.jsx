@@ -132,10 +132,10 @@ const filters = ['All Tutors', 'IB', 'HSC']
 
 function TutorCard({ tutor, type }) {
     return (
-        <div className="bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark overflow-hidden hover:shadow-lg hover:border-primary-accent/30 transition-all duration-300">
+        <div className="bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark overflow-hidden hover:shadow-lg hover:border-primary-accent/30 transition-all duration-300 active:scale-[0.98]">
             {/* Photo + Name header */}
-            <div className="flex items-center gap-4 p-6 pb-4">
-                <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-border-light dark:border-border-dark flex-shrink-0">
+            <div className="flex items-center gap-3 md:gap-4 p-4 md:p-6 pb-3 md:pb-4">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-border-light dark:border-border-dark flex-shrink-0">
                     <img
                         src={tutor.image}
                         alt={tutor.name}
@@ -143,12 +143,12 @@ function TutorCard({ tutor, type }) {
                     />
                 </div>
                 <div className="min-w-0">
-                    <h3 className="text-lg font-semibold text-primary dark:text-white truncate">{tutor.name}</h3>
-                    <span className="text-xs font-bold uppercase tracking-widest text-primary-accent">{type}</span>
+                    <h3 className="text-base md:text-lg font-semibold text-primary dark:text-white truncate">{tutor.name}</h3>
+                    <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-primary-accent">{type}</span>
                 </div>
             </div>
 
-            <div className="px-6 pb-6">
+            <div className="px-4 pb-4 md:px-6 md:pb-6">
                 {/* Scores */}
                 {type === 'IB' ? (
                     <div className="flex items-center gap-0 mb-4">
@@ -206,7 +206,7 @@ export default function Tutors() {
 
     return (
         <>
-            <header className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+            <header className="relative pt-16 pb-10 md:pt-24 md:pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
                 <div className="absolute inset-0 z-0 opacity-5 dark:opacity-10">
                     <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -217,25 +217,25 @@ export default function Tutors() {
                         <rect width="100%" height="100%" fill="url(#grid)"></rect>
                     </svg>
                 </div>
-                <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
-                    <span className="inline-block py-1 px-3 rounded-full bg-primary/5 text-primary-accent text-xs font-semibold tracking-widest uppercase mb-4 dark:bg-white/5">World-Class Mentorship</span>
-                    <h1 className="text-5xl md:text-6xl font-serif font-medium text-primary dark:text-white mb-6 tracking-tight">
+                <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-6 lg:px-8 text-center">
+                    <span className="inline-block py-1 px-3 rounded-full bg-primary/5 text-primary-accent text-[10px] md:text-xs font-semibold tracking-widest uppercase mb-3 md:mb-4 dark:bg-white/5">World-Class Mentorship</span>
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-medium text-primary dark:text-white mb-4 md:mb-6 tracking-tight">
                         Meet our <span className="italic text-primary-accent">Tutors</span>
                     </h1>
-                    <p className="mt-4 max-w-2xl mx-auto text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                    <p className="mt-3 md:mt-4 max-w-2xl mx-auto text-sm md:text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed">
                         Elite tutoring from recent graduates who achieved top scores while balancing life and individual passions.
                     </p>
                 </div>
             </header>
 
             {/* Floating filter pill */}
-            <div className="sticky top-[76px] md:top-[80px] z-40 flex justify-center py-3 pointer-events-none">
-                <div className="inline-flex items-center gap-1 px-2 py-1.5 rounded-full bg-surface-light/70 dark:bg-background-dark/70 backdrop-blur-xl border border-border-light/40 dark:border-border-dark/40 shadow-md shadow-black/[0.03] dark:shadow-black/20 pointer-events-auto">
+            <div className="sticky top-[60px] md:top-[80px] z-40 flex justify-center py-2 md:py-3 pointer-events-none">
+                <div className="inline-flex items-center gap-1 px-1.5 md:px-2 py-1 md:py-1.5 rounded-full bg-surface-light/70 dark:bg-background-dark/70 backdrop-blur-xl border border-border-light/40 dark:border-border-dark/40 shadow-md shadow-black/[0.03] dark:shadow-black/20 pointer-events-auto">
                     {filters.map((filter) => (
                         <button
                             key={filter}
                             onClick={() => setActiveFilter(filter)}
-                            className={`px-4 py-1 rounded-full text-xs font-medium transition-all ${
+                            className={`px-3 md:px-4 py-1 rounded-full text-[11px] md:text-xs font-medium transition-all ${
                                 activeFilter === filter
                                     ? 'bg-primary text-white shadow-sm'
                                     : 'text-text-muted-light dark:text-text-muted-dark hover:bg-gray-100 dark:hover:bg-white/10'
@@ -247,7 +247,7 @@ export default function Tutors() {
                 </div>
             </div>
 
-            <main className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+            <main className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-10 md:py-16">
                 {/* IB Tutors */}
                 {showIB && (
                     <div className="mb-16">
@@ -255,7 +255,7 @@ export default function Tutors() {
                             <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-primary-accent flex-shrink-0">International Baccalaureate</h2>
                             <div className="flex-1 h-px bg-border-light dark:bg-border-dark"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                             {ibTutors.map((tutor) => (
                                 <TutorCard key={tutor.name} tutor={tutor} type="IB" />
                             ))}
@@ -266,11 +266,11 @@ export default function Tutors() {
                 {/* HSC Tutors */}
                 {showHSC && (
                     <div>
-                        <div className="flex items-center gap-4 mb-8">
-                            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-primary-accent flex-shrink-0">HSC (New South Wales)</h2>
+                        <div className="flex items-center gap-4 mb-6 md:mb-8">
+                            <h2 className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-primary-accent flex-shrink-0">HSC (New South Wales)</h2>
                             <div className="flex-1 h-px bg-border-light dark:bg-border-dark"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                             {hscTutors.map((tutor) => (
                                 <TutorCard key={tutor.name} tutor={tutor} type="HSC" />
                             ))}
@@ -279,10 +279,10 @@ export default function Tutors() {
                 )}
             </main>
 
-            <section className="bg-surface-light dark:bg-surface-dark border-y border-border-light dark:border-border-dark py-20">
-                <div className="max-w-4xl mx-auto px-6 text-center">
-                    <h2 className="text-3xl md:text-4xl font-serif text-primary dark:text-white mb-6">Are you a high achiever?</h2>
-                    <p className="text-lg text-text-muted-light dark:text-text-muted-dark mb-8">
+            <section className="bg-surface-light dark:bg-surface-dark border-y border-border-light dark:border-border-dark py-14 md:py-20">
+                <div className="max-w-4xl mx-auto px-5 md:px-6 text-center">
+                    <h2 className="text-2xl md:text-4xl font-serif text-primary dark:text-white mb-4 md:mb-6">Are you a high achiever?</h2>
+                    <p className="text-sm md:text-lg text-text-muted-light dark:text-text-muted-dark mb-6 md:mb-8">
                         Join our team of elite mentors. We are always looking for exceptional individuals who are passionate about education and have achieved outstanding results in the HSC or IB.
                     </p>
                     <Link to="#" className="inline-block bg-primary text-white hover:bg-black/90 px-8 py-3 rounded-md font-medium shadow-lg hover:shadow-xl transition-all">Apply to Teach</Link>

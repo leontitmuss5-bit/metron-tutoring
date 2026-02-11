@@ -16,7 +16,7 @@ export default function Layout() {
         <div className="min-h-screen flex flex-col bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300 antialiased">
             <Navbar />
             {/* Spacer for fixed navbar on non-home pages */}
-            {!isHome && <div className="h-24" />}
+            {!isHome && <div className="h-16 md:h-24" />}
             <main className="flex-grow">
                 <Outlet />
             </main>
