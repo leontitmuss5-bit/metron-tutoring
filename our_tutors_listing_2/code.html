@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Métron Tutoring - Elite Mentorship for IB &amp; HSC</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1a1a1a",
+                        "primary-accent": "#CFB53B",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#121212",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-light": "#333333",
+                        "text-dark": "#E5E5E5",
+                        "text-muted-light": "#666666",
+                        "text-muted-dark": "#A3A3A3",
+                        "border-light": "#E5E5E5",
+                        "border-dark": "#333333",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        serif: ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "4px",
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grid-pattern {
+            background-image: radial-gradient(circle, #e5e5e5 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .dark .grid-pattern {
+            background-image: radial-gradient(circle, #333 1px, transparent 1px);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(250,250,250,0) 0%, rgba(250,250,250,1) 100%);
+        }
+        .dark .hero-gradient {
+            background: linear-gradient(to bottom, rgba(18,18,18,0) 0%, rgba(18,18,18,1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans antialiased">
+<nav class="sticky top-0 z-50 w-full bg-surface-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-border-light dark:border-border-dark">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex-shrink-0 flex items-center gap-3">
+<div class="text-3xl font-sans tracking-tight font-medium text-black dark:text-white">
+                    métron<span class="font-thin opacity-60">)</span>
+</div>
+</div>
+<div class="hidden md:block">
+<div class="ml-10 flex items-baseline space-x-8">
+<a class="text-primary-accent border-b-2 border-primary-accent px-1 py-2 text-sm font-medium" href="#">Home</a>
+<a class="text-text-light dark:text-text-dark hover:text-primary-accent dark:hover:text-primary-accent px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#">Why Métron</a>
+<a class="text-text-light dark:text-text-dark hover:text-primary-accent dark:hover:text-primary-accent px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#">Tutors</a>
+<a class="text-text-light dark:text-text-dark hover:text-primary-accent dark:hover:text-primary-accent px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#">Results</a>
+<a class="bg-primary text-white hover:bg-black/80 px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5" href="#">Book Consultation</a>
+</div>
+</div>
+<div class="-mr-2 flex md:hidden">
+<button class="bg-transparent inline-flex items-center justify-center p-2 rounded-md text-text-muted-light hover:text-primary hover:bg-gray-100 focus:outline-none" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="relative pt-32 pb-24 lg:pt-48 lg:pb-40 overflow-hidden grid-pattern">
+<div class="absolute inset-0 z-0 hero-gradient"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
+<span class="inline-block py-1 px-3 rounded-full bg-primary/5 text-primary-accent text-xs font-semibold tracking-widest uppercase mb-6 dark:bg-white/5">The Standard of Academic Excellence</span>
+<h1 class="text-6xl md:text-8xl font-serif font-medium text-primary dark:text-white mb-8 tracking-tight">
+            Elite Mentorship for <br class="hidden md:block"/>
+            the <span class="italic text-primary-accent font-normal">IB and HSC</span>
+</h1>
+<p class="mt-4 max-w-3xl mx-auto text-xl text-text-muted-light dark:text-text-muted-dark leading-relaxed font-light">
+            We bridge the gap between high achievement and true academic mastery. Our methodology is built on the experience of the nation's top scholars.
+        </p>
+<div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
+<a class="px-10 py-4 bg-primary text-white rounded-full font-medium hover:bg-black transition-all shadow-xl" href="#">Get Started</a>
+<a class="px-10 py-4 border border-border-light dark:border-border-dark bg-white dark:bg-surface-dark text-primary dark:text-white rounded-full font-medium hover:border-primary-accent transition-all flex items-center gap-2" href="#">
+                Our Results <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<main>
+<section class="py-24 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+<div class="space-y-6 group">
+<div class="w-12 h-px bg-primary-accent"></div>
+<h3 class="text-2xl font-serif text-primary dark:text-white">The Métron Philosophy</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed italic">
+                        "Success in the IB and HSC isn't just about rote learning; it's about architectural thinking. We founded Métron to provide the precise mentorship we wish we had."
+                    </p>
+<div class="pt-4">
+<p class="text-sm font-semibold text-primary dark:text-white">Leon, Will, and Paddy</p>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest">Founding Directors</p>
+</div>
+</div>
+<div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-light dark:bg-surface-dark p-10 rounded-xl border border-border-light dark:border-border-dark shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary-accent mb-6 text-3xl">architecture</span>
+<h4 class="text-xl font-serif text-primary dark:text-white mb-4">Strategic Pedagogy</h4>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                            Our curriculum is designed to target the specific marking criteria of the IB and HSC, ensuring every hour of study translates to maximum performance.
+                        </p>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-10 rounded-xl border border-border-light dark:border-border-dark shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary-accent mb-6 text-3xl">school</span>
+<h4 class="text-xl font-serif text-primary dark:text-white mb-4">Elite Mentors</h4>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                            Beyond their scores, our tutors are trained educators who understand the psychological and technical demands of high-stakes assessment.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-surface-dark/30 border-y border-border-light dark:border-border-dark">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="max-w-4xl mx-auto text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-serif text-primary dark:text-white mb-6">Built for High Achievers</h2>
+<div class="w-24 h-1 bg-primary-accent mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark overflow-hidden group hover:border-primary-accent/50 transition-all duration-300 shadow-sm">
+<div class="aspect-[16/9] bg-gray-100 dark:bg-gray-800 overflow-hidden">
+<img alt="Elite Tutoring Session" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjkmFtXDuTLCUiCDDL_qHH-X_VxXFQnzUQkRHwL1ZlE_6YEoHe8TQ1_Oe6CEx2J984Jql9OQYjw13onU7ypF9npcmJd2oxvmq2obbtGCMp7PGbmeccAknND40yD1_-eJlDHgxpUX6mIW5gbE0Z9RKF7pdTe_I2iobZCOCDBb5sopZJlO5WkcZHhxseeYFcH4nAi89-y52osybgqp0Ge_1HSwc1USy6NZ8oNFB4ihpJf3WIa7RS79mlHXw36K_vfn1Iq-ustKjk0H0"/>
+</div>
+<div class="p-8">
+<h4 class="text-lg font-serif text-primary dark:text-white mb-3 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-accent"></span>
+                            Bespoke Programs
+                        </h4>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                            Every student is unique. We develop individualised roadmaps that align with specific academic goals, whether it's an ATAR of 99.95 or a Perfect 45 IB score.
+                        </p>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark overflow-hidden group hover:border-primary-accent/50 transition-all duration-300 shadow-sm">
+<div class="aspect-[16/9] bg-gray-100 dark:bg-gray-800 overflow-hidden">
+<img alt="Resources and Materials" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsnGZe7jy1vIktoATOBHkl9y98fmx9VxFtH16LBzkBv1lBcnGmrEnS-7OLsKt-LVNz0GZ5FfJ5sHE5Ecju-HZy6S4S4mSeFGAFlAC0CF2m-YNjM26SNCrbAj-6-zafFx0CpE2ha468KvISU5YrY6bmz1Byv1Tf_FuI6ac07IlSzXk736jmcflmyvUhYAD3LSQdF5Ch1V7qsu17ZxNtSFEdnovHvgdVupHL_r2tIiVEUYNCa5Y8-N1FyFfatI7aXU8FfioCgeIBiDc"/>
+</div>
+<div class="p-8">
+<h4 class="text-lg font-serif text-primary dark:text-white mb-3 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-accent"></span>
+                            Proprietary Resources
+                        </h4>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                            Access our exclusive library of past papers, state-rank notes, and exemplars that aren't available anywhere else in the market.
+                        </p>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark overflow-hidden group hover:border-primary-accent/50 transition-all duration-300 shadow-sm">
+<div class="aspect-[16/9] bg-gray-100 dark:bg-gray-800 overflow-hidden">
+<img alt="Modern Learning Space" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBswFJGjhYLs6l-x0pa0ZoNRKrScPyHDvq1AjNOahHp0ge2v5vosFgY3RxxoqIgzy9edyVkkWiZET213DGK-Ylf2CcoPTmPQMCNOx90lpzvgh3X_gCNfG34bGkpywcT4ZR-W1ATem3BQ9c5jh1k7H2hSh89957g7SXjjrSAX-BeEM8evEVzZlUAdTpr1q6mdvE_e-lrVqNG2l6ehEu-XOZVyrlV_hxEGFmO_HnfzM4Y897BYmJnygR4cXn6SVu54FTBlRvohpFovlI"/>
+</div>
+<div class="p-8">
+<h4 class="text-lg font-serif text-primary dark:text-white mb-3 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-accent"></span>
+                            Modern Environment
+                        </h4>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                            Learn in an environment designed for deep focus. Our premium Sydney campus provides the perfect atmosphere for academic rigour.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="relative py-24 bg-primary dark:bg-surface-dark overflow-hidden">
+<div class="absolute inset-0 opacity-10 grid-pattern"></div>
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+<h2 class="text-3xl md:text-5xl font-serif text-white mb-8">Ready to define your academic future?</h2>
+<p class="text-lg text-gray-300 mb-10 font-light">
+                Consult with our senior mentors today and discover how Métron can transform your results.
+            </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a class="bg-primary-accent text-primary px-10 py-4 rounded-full font-bold hover:bg-white transition-all shadow-xl" href="#">Book a Consultation</a>
+<a class="border border-white/30 text-white px-10 py-4 rounded-full font-medium hover:bg-white/10 transition-all" href="#">View Our Tutors</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-light dark:bg-background-dark pt-24 pb-12 border-t border-border-light dark:border-border-dark">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="text-3xl font-sans tracking-tight font-medium text-black dark:text-white mb-6">
+                    métron<span class="font-thin opacity-60">)</span>
+</div>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed max-w-xs">
+                    The premium destination for academic mentorship. We cultivate excellence through strategic education and world-class guidance.
+                </p>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-[0.2em] text-primary dark:text-white mb-6">Subject Expertise</h4>
+<ul class="space-y-3 text-sm text-text-muted-light dark:text-text-muted-dark">
+<li><a class="hover:text-primary-accent transition-colors" href="#">Mathematics Advanced &amp; Ext</a></li>
+<li><a class="hover:text-primary-accent transition-colors" href="#">English Advanced &amp; Ext</a></li>
+<li><a class="hover:text-primary-accent transition-colors" href="#">Physics &amp; Chemistry</a></li>
+<li><a class="hover:text-primary-accent transition-colors" href="#">Economics</a></li>
+<li><a class="hover:text-primary-accent transition-colors" href="#">IB Subjects</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-[0.2em] text-primary dark:text-white mb-6">Quick Links</h4>
+<ul class="space-y-3 text-sm text-text-muted-light dark:text-text-muted-dark">
+<li><a class="hover:text-primary-accent transition-colors" href="#">Why Choose Métron</a></li>
+<li><a class="hover:text-primary-accent transition-colors" href="#">Our Tutor Network</a></li>
+<li><a class="hover:text-primary-accent transition-colors" href="#">Student Success Stories</a></li>
+<li><a class="hover:text-primary-accent transition-colors" href="#">Book Consultation</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-[0.2em] text-primary dark:text-white mb-6">Campus</h4>
+<ul class="space-y-3 text-sm text-text-muted-light dark:text-text-muted-dark">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sm mt-0.5">location_on</span>
+<span>Level 2, 100 George St<br/>Sydney, NSW 2000</span>
+</li>
+<li class="flex items-start gap-2 pt-2">
+<span class="material-symbols-outlined text-sm mt-0.5">mail</span>
+<a class="hover:text-primary-accent transition-colors" href="mailto:hello@metron.edu.au">hello@metron.edu.au</a>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sm mt-0.5">phone</span>
+<span>(02) 9000 1234</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-border-light dark:border-border-dark pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[10px] uppercase tracking-widest text-text-muted-light dark:text-text-muted-dark">© 2024 Métron Tutoring. Precision in Education.</p>
+<div class="flex space-x-8">
+<a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary-accent transition-colors" href="#">
+<span class="sr-only">LinkedIn</span>
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary-accent transition-colors" href="#">
+<span class="sr-only">Instagram</span>
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+</script>
+
+</body></html>
