@@ -197,7 +197,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
 
-                {/* Centered landing logo */}
+                {/* Centered landing logo – mask reveal */}
                 <div
                     className="absolute inset-0 flex items-center justify-center z-10 will-change-transform"
                     style={{
@@ -205,10 +205,13 @@ export default function Home() {
                         transform: `translate3d(0, ${-scrollY * 0.15}px, 0) scale(${1 + heroProgress * 0.2})`,
                     }}
                 >
+                    {/* Thin vertical accent line that appears first */}
+                    <div className="absolute w-px h-[120px] md:h-[180px] bg-white/80 logo-mask-line" />
+
                     <img
                         src="/rbalancelandingwhite.png"
                         alt="Real Balance — IB and HSC mentoring founded by elite athletes who achieved top scores, est. 2026"
-                        className="w-[400px] md:w-[560px] lg:w-[720px] max-w-[80vw] select-none"
+                        className="w-[400px] md:w-[560px] lg:w-[720px] max-w-[80vw] select-none logo-mask-reveal"
                         draggable="false"
                     />
                 </div>

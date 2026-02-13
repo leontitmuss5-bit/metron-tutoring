@@ -8,6 +8,62 @@
     }
 }
 
+/* ===== MASK REVEAL (landing logo) ===== */
+
+@keyframes maskReveal {
+    0% {
+        clip-path: inset(0 50.5% 0 50.5%);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    100% {
+        clip-path: inset(0 0% 0 0%);
+        opacity: 1;
+    }
+}
+
+@keyframes maskScale {
+    0% {
+        transform: scale(1.08);
+        filter: brightness(2);
+    }
+    60% {
+        filter: brightness(1);
+    }
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+
+@keyframes maskLine {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    30% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.logo-mask-reveal {
+    animation: maskReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both,
+               maskScale 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+}
+
+.logo-mask-line {
+    animation: maskLine 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.15s both;
+}
+
 /* ===== ANIMATIONS ===== */
 
 .fade-in-up {
