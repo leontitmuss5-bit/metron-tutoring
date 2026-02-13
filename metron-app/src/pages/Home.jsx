@@ -1,5 +1,39 @@
 import { Link } from 'react-router-dom'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
+
+/* ── Animated counter hook ── */
+function useCountUp(end, duration = 2000, startOnView = false) {
+    const [count, setCount] = useState(0)
+    const [hasStarted, setHasStarted] = useState(false)
+    const ref = useRef(null)
+
+    const start = useCallback(() => {
+        if (hasStarted) return
+        setHasStarted(true)
+        const startTime = performance.now()
+        const easeOutQuart = t => 1 - Math.pow(1 - t, 4)
+
+        const tick = now => {
+            const elapsed = now - startTime
+            const progress = Math.min(elapsed / duration, 1)
+            setCount(Math.round(easeOutQuart(progress) * end))
+            if (progress < 1) requestAnimationFrame(tick)
+        }
+        requestAnimationFrame(tick)
+    }, [end, duration, hasStarted])
+
+    useEffect(() => {
+        if (!startOnView || !ref.current) return
+        const observer = new IntersectionObserver(
+            ([entry]) => { if (entry.isIntersecting) { start(); observer.disconnect() } },
+            { threshold: 0.3 }
+        )
+        observer.observe(ref.current)
+        return () => observer.disconnect()
+    }, [start, startOnView])
+
+    return { count, ref, hasStarted }
+}
 
 const topTutors = [
     {
@@ -73,6 +107,22 @@ export default function Home() {
     const heroRef = useRef(null)
     const [heroHeight, setHeroHeight] = useState(1000)
     const [currentImage, setCurrentImage] = useState(0)
+
+    // Animated stat counters
+    const atar = useCountUp(99, 2000, true)
+    const ibas = useCountUp(44, 2000, true)
+    const statsRef = useRef(null)
+    const [topVisible, setTopVisible] = useState(false)
+
+    useEffect(() => {
+        if (!statsRef.current) return
+        const observer = new IntersectionObserver(
+            ([entry]) => { if (entry.isIntersecting) { setTopVisible(true); observer.disconnect() } },
+            { threshold: 0.3 }
+        )
+        observer.observe(statsRef.current)
+        return () => observer.disconnect()
+    }, [])
 
     // Image slideshow timer
     useEffect(() => {
@@ -192,19 +242,25 @@ export default function Home() {
                         </p>
                     </div>
 
-                    {/* Stats row */}
-                    <div className="grid grid-cols-3 gap-4 md:gap-12 mb-10 md:mb-14">
-                        <div className="text-center">
-                            <p className="text-3xl md:text-6xl font-serif font-medium text-primary dark:text-white tracking-tight">99+</p>
-                            <p className="mt-1 md:mt-2 text-[10px] md:text-sm text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest font-semibold">Average ATAR</p>
+                    {/* Stats row – animated counters */}
+                    <div ref={statsRef} className="grid grid-cols-3 gap-4 md:gap-12 mb-10 md:mb-14">
+                        <div ref={atar.ref} className="text-center">
+                            <p className={`text-3xl md:text-6xl font-serif font-medium text-primary dark:text-white tracking-tight transition-all duration-700 ${atar.hasStarted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                                {atar.hasStarted ? `${atar.count}+` : '\u00A0'}
+                            </p>
+                            <p className={`mt-1 md:mt-2 text-[10px] md:text-sm text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest font-semibold transition-all duration-700 delay-300 ${atar.hasStarted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>Average ATAR</p>
+                        </div>
+                        <div ref={ibas.ref} className="text-center">
+                            <p className={`text-3xl md:text-6xl font-serif font-medium text-primary dark:text-white tracking-tight transition-all duration-700 delay-150 ${ibas.hasStarted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                                {ibas.hasStarted ? `${ibas.count}+` : '\u00A0'}
+                            </p>
+                            <p className={`mt-1 md:mt-2 text-[10px] md:text-sm text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest font-semibold transition-all duration-700 delay-[450ms] ${ibas.hasStarted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>Average IBAS</p>
                         </div>
                         <div className="text-center">
-                            <p className="text-3xl md:text-6xl font-serif font-medium text-primary dark:text-white tracking-tight">44+</p>
-                            <p className="mt-1 md:mt-2 text-[10px] md:text-sm text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest font-semibold">Average IBAS</p>
-                        </div>
-                        <div className="text-center">
-                            <p className="text-3xl md:text-6xl font-serif font-medium text-primary-accent tracking-tight">Top</p>
-                            <p className="mt-1 md:mt-2 text-[10px] md:text-sm text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest font-semibold">State Rankers</p>
+                            <p className={`text-3xl md:text-6xl font-serif font-medium text-primary-accent tracking-tight transition-all duration-700 delay-300 ${topVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-50 translate-y-4'}`}>
+                                Top
+                            </p>
+                            <p className={`mt-1 md:mt-2 text-[10px] md:text-sm text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest font-semibold transition-all duration-700 delay-[600ms] ${topVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>State Rankers</p>
                         </div>
                     </div>
 

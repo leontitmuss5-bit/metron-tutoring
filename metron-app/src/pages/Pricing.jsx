@@ -19,7 +19,7 @@ export default function Pricing() {
         },
         {
             question: "Where do the sessions take place?",
-            answer: "We offer sessions at our premium Sydney CBD campus, as well as high-definition online tutoring for students who require flexibility or are based outside of Sydney."
+            answer: "By default, all sessions are held over Zoom. However, in-person sessions can be arranged upon request and may come at an additional cost."
         },
         {
             question: "What is your cancellation policy?",
@@ -98,10 +98,15 @@ export default function Pricing() {
                             <span className="text-[10px] md:text-xs font-bold text-primary-accent uppercase tracking-widest mb-2 block">Total Mastery</span>
                             <h3 className="text-2xl md:text-3xl font-serif font-medium text-primary dark:text-white mb-3 md:mb-4">Term Package</h3>
                             <div className="flex items-baseline gap-1 mb-4 md:mb-6">
-                                <span className="text-2xl md:text-4xl font-serif font-medium text-primary dark:text-white">Inquire Now</span>
+                                <span className="text-xs md:text-sm text-text-muted-light dark:text-text-muted-dark mr-1">from</span>
+                                <span className="text-3xl md:text-4xl font-serif font-medium text-primary dark:text-white">$900</span>
                             </div>
                             <div className="h-px w-full bg-border-light dark:bg-border-dark mb-4 md:mb-6"></div>
                             <ul className="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                                <li className="flex items-start gap-2.5 md:gap-3">
+                                    <span className="material-symbols-outlined text-primary-accent text-sm mt-0.5">check_circle</span>
+                                    <span className="text-xs md:text-sm text-text-muted-light dark:text-text-muted-dark">Free 30 min consultation call included</span>
+                                </li>
                                 <li className="flex items-start gap-2.5 md:gap-3">
                                     <span className="material-symbols-outlined text-primary-accent text-sm mt-0.5">check_circle</span>
                                     <span className="text-xs md:text-sm text-text-muted-light dark:text-text-muted-dark">Full term academic planning</span>
@@ -126,7 +131,7 @@ export default function Pricing() {
                         </div>
                         <div className="mt-auto p-5 md:p-8 pt-0">
                             <Link to="#" className="block w-full text-center py-4 border border-primary dark:border-white text-primary dark:text-white hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all rounded-lg text-sm font-medium uppercase tracking-widest">
-                                Contact for Package
+                                Book Free 30 Min Consultation
                             </Link>
                         </div>
                     </div>
