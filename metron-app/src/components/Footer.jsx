@@ -21,7 +21,6 @@ export default function Footer() {
 
                     {/* Nav links */}
                     <nav className="flex flex-wrap items-center justify-center gap-5 md:gap-8 text-xs md:text-sm text-text-muted-light dark:text-text-muted-dark">
-                        <Link to="/#about" className="hover:text-primary-accent transition-colors">About Us</Link>
                         <Link to="/tutors" className="hover:text-primary-accent transition-colors">Our Tutors</Link>
                         <Link to="/pricing" className="hover:text-primary-accent transition-colors">Pricing</Link>
                         <a href="mailto:hello@balancetutoring.com" className="hover:text-primary-accent transition-colors">Contact</a>

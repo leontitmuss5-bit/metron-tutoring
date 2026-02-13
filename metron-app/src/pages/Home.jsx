@@ -233,30 +233,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* ===== ABOUT REAL BALANCE ===== */}
-            <section id="about" className="py-16 md:py-32 bg-white dark:bg-surface-dark/30 border-y border-border-light dark:border-border-dark">
-                <div className="max-w-4xl mx-auto px-5 md:px-6 lg:px-8">
-                    <div className="mb-8 md:mb-12">
-                        <div className="w-12 h-px bg-primary-accent mb-4 md:mb-6"></div>
-                        <h2 className="text-2xl md:text-4xl font-serif text-primary dark:text-white tracking-tight">About Real Balance</h2>
-                    </div>
-                    <div className="space-y-5 md:space-y-6 text-sm md:text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed">
-                        <p>
-                            During our own academic journeys, we quickly noticed how different structured programs like the IB — and later the HSC — are from what many students initially expect. Each has its own philosophy, assessment style, and internal logic, and these aren't always obvious when you're in the middle of it.
-                        </p>
-                        <p>
-                            Balancing heavy academic demands with already full schedules forced us to rethink how we studied. Instead of increasing hours, we refined our approach, streamlining revision, prioritising high-impact tasks, and learning how to work with the curriculum rather than against it. This made our study time more effective, more sustainable, and ultimately more enjoyable.
-                        </p>
-                        <p>
-                            When those methods began to consistently deliver results, we founded what is now Real Balance Tutoring. While our roots are in IB tutoring, Real Balance has grown to include a wider network of tutors and now supports both IB and HSC students across a range of subjects.
-                        </p>
-                        <p>
-                            Our goal remains the same: to give students the tools, strategies, and guidance to perform at a high level academically without sacrificing the things that matter to them. "Study smarter, not harder" may be a cliché, but at Real Balance, we focus on making it practical, structured, and achievable.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
             {/* ===== TOP TUTORS (infinite scroll) ===== */}
             <section className="py-16 md:py-32 bg-background-light dark:bg-background-dark overflow-hidden">
                 <div className="max-w-5xl mx-auto px-5 md:px-6 lg:px-8 mb-10 md:mb-16">
